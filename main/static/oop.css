@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin: 0;
+}
+
+/* --- 1. ВЕРХНЯЯ ПАНЕЛЬ --- */
+.search-bar {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 70%;
+}
+
+.add-button {
+    background-color: #d866d8; /* Фиолетовый */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 25%;
+}
+
+/* --- 2. СЕТКА ЗАДАЧ --- */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1200px; /* Чтобы поместилось по 3 в ряд, если экран большой */
+    justify-content: flex-start;
+}
+
+/* --- 3. ДИЗАЙН КАРТОЧКИ --- */
+.box {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    width: 350px;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.form{
+    width: 90%;
+    height: auto;
+}
+
+/* ЦВЕТОВЫЕ МОДИФИКАТОРЫ */
+.card-green {
+    background-color: #d1f2d6; /* Зеленый */
+}
+
+
+
+.card-yellow {
+    background-color: #fff59d; /* Желтый */
+}
+
+.card-gray {
+    background-color: #e0e0e0; /* Серый */
+    color: #777;
+    text-decoration: line-through;
+}
+
+/* ЭЛЕМЕНТЫ ВНУТРИ КАРТОЧКИ */
+
+/* Чекбокс */
+.checkbox-area {
+    margin-right: 15px;
+}
+.checkbox-area input {
+    transform: scale(1.4);
+}
+
+/* Текст и дата */
+.info-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.far .fa-star .star-active a {
+    color: inherit;
+}
+
+.fas .fa-trash-alt a {
+    color: inherit;
+}
+
+.far .fa-star a{
+    color: inherit;
+}
+
+.date {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Если карточка серая - зачеркиваем текст */
+
+
+/* Иконки справа */
+.icons-area {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Звезда */
+.star-active {
+    color: #fbc02d; /* Желтая звезда */
+}
