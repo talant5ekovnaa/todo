@@ -29,7 +29,8 @@
                 <span class="date">{{ todo.created_at}}</span>
             </div>
             <div class="icons-area">
-                <i class="far fa-star"></i> <i class="fas fa-trash-alt"></i>
+                <i class="far fa-star"></i> 
+                <a href="{% url 'delete-todo' todo.id %}"><i class="fas fa-trash-alt"></i></a>
             </div>
         </div>
         {% endfor %}
