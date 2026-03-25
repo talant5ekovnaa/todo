@@ -12,6 +12,9 @@ def test(request):
 def second(request):
     return HttpResponse("test 2 page")
 
+
+
+
 def add_todo(request):
     form = request.POST
     text = form["todo_text"]
