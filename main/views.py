@@ -1,21 +1,25 @@
 from django.shortcuts import render, redirect
- from .models import ToDo
+from .models import ToDo
 
- def homepage(request):
-    return render(request, "oop.html")
+def homepage(request):
+    return render(request, "index.html")
 
 def test(request):
     todo_list = ToDo.objects.all()
     return render(request, "test.html", {"todo_list": todo_list})
 
- def add_todo(request):
+
+def second(request):
+    return HttpResponse("test 2 page")
+
+def add_todo(request):
     form = request.POST
     text = form["todo_text"]
     todo = ToDo(text=text)
     todo.save()
-     return redirect(test)
+    return redirect(test)
 
- def delete_todo(request, id):
+def delete_todo(request, id):
     todo = ToDo.objects.get(id=id)
     todo.delete()
     return redirect(test)
